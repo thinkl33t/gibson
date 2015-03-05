@@ -1,0 +1,12 @@
+dn: CN=rfidCode,CN=Schema,CN=Configuration,dc=hackspace,dc=internal
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+attributeID: 1.3.6.1.4.1.40789.2012.11.1.2.1.1
+cn: rfidCode
+name: rfidCode
+lDAPDisplayName: rfidCode
+description: RFID Card ID
+attributeSyntax: 2.5.5.5
+oMSyntax: 22
+isSingleValued: FALSE

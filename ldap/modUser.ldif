@@ -1,0 +1,4 @@
+dn: CN=User,CN=Schema,CN=Configuration,dc=hackspace,dc=internal
+changetype: modify
+add: mayContain
+mayContain: rfidCode

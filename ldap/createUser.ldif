@@ -1,0 +1,12 @@
+dn: CN=username, OU=Users, DC=hackspace, DC=internal
+changetype: add
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+samAccountName: demouser
+cn: Demo User
+givenName: Demo
+sn: User
+rfidCode: ABCDEF012345
+unicodePwd: "password"
