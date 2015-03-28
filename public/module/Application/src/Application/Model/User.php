@@ -1,6 +1,6 @@
 <?php
 
-namespace bkuser\Model;
+namespace Application\Model;
 
 
 class User {

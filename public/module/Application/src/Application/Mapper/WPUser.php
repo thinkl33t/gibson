@@ -10,7 +10,10 @@ namespace Application\Mapper;
 
 use ZfcBase\Mapper\AbstractDbMapper;
 
-class WPUserMeta extends  AbstractDbMapper
+class WPUser extends  AbstractDbMapper
 {
-
+    /**
+     * @var string
+     */
+    protected $tableName = 'wp_users';
 }
