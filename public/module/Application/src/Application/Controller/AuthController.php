@@ -51,7 +51,7 @@ class AuthController extends AbstractActionController
                             LdapAttribute::setAttribute($entry, 'mail', $wpUser->user_email);
                             LdapAttribute::setAttribute($entry, 'objectClass', 'User');
                             LdapAttribute::setAttribute($entry, 'samAccountName', $wpUser->user_login);
-
+                            LdapAttribute::setAttribute($entry, 'userAccountControl', 512);
 
 //                            $ldap = $ldapAdapter->getLdap();
                             $ldap = $this->getServiceLocator()->get('ldap');
@@ -62,12 +62,12 @@ class AuthController extends AbstractActionController
                             LdapAttribute::setPassword($ldapPasswordArray, $password, LdapAttribute::PASSWORD_UNICODEPWD);
                             try {
                                 $ldap->update($dn, $ldapPasswordArray);
-                            } catch(LdapException $e) {
+                            } catch(Exception $e) {
 //                                $ldapAdapter->getLdap()->delete($dn);
                                 Debug::dump($e->getMessage());
                                 die();
                             }
-//                            Debug::dump($hm);
+//                            Debug::dump($ldap);
 //                            Debug::dump($hm);
 //                            \Zend\Debug\Debug::dump($groups);
 //                            \Zend\Debug\Debug::dump($rfid);
