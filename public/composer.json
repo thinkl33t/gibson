@@ -12,7 +12,7 @@
         "zendframework/zendframework": "2.3.*",
         "doctrine/annotations": "~1.2",
         "zf-commons/zfc-base": "~0.1",
-        "binarykitten/bkuser": "0.0.9.*",
+        "binarykitten/zf2authwordpress": "0.0.*",
         "vgarvardt/zf-simple-migrations": "0.1.*"
     },
   "require-dev": {

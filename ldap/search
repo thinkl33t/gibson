@@ -1,2 +1,2 @@
 #!/bin/bash
-ldapsearch -h 127.0.0.1 -D "administrator@hackspace.internal" -b "dc=hackspace,dc=intenal" -w Password4LDAP $$1
+ldapsearch -h 127.0.0.1 -D "administrator@hackspace.internal" -b "dc=hackspace,dc=internal" -w Password4LDAP $@
