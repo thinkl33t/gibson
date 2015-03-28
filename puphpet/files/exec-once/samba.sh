@@ -14,5 +14,5 @@ echo "TLS_CACERT /etc/ssl/certs/ca-certificates.crt" | sudo tee -a /etc/ldap/lda
 echo "TLS_REQCERT never" | sudo tee -a /etc/ldap/ldap.conf
 
 # create a test user, and reset their password to Password4LDAP
-sudo ldapadd -w Password4LDAP -D 'administrator@hackspace.internal' -f /vagrant/ldap/createUser.ldif -c
+sudo ldapadd -h 127.0.0.1 -w Password4LDAP -D 'administrator@hackspace.internal' -f /vagrant/ldap/createUser.ldif -c
 sudo samba-tool user setpassword demouser --newpassword="Password4LDAP"
